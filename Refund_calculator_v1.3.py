@@ -4,10 +4,6 @@ from decimal import Decimal, ROUND_HALF_UP
 
 # DARK MODE REFUND CALCULATOR - AUTH: TRAVIS DUNN
 
-# 🔧 New Features
-# - Added “Client Summary” Button:
-#   - Opens a popup with a clean refund summary for screenshotting/escalations.
-#   - Uses the same dark theme and monospace formatting for clarity.
 
 # 🎨 UI Enhancements
 # - Improved formatting of result output label for better alignment and readability.
