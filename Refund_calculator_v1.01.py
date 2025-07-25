@@ -181,7 +181,7 @@ def clear_fields():
     entry_amount_paid.delete(0, tk.END)
     entry_tpp.delete(0, tk.END)
     entry_deposit.delete(0, tk.END)
-    label_result.config(text="Result: ")
+    label_result.config(text=" ")
     entry_total_cost.focus_set()
 
 button_clear = tk.Button(button_frame, text="Clear", command=clear_fields, font=label_font, bg=light_mode["clear_button_bg"], fg="white", width=10)
@@ -198,5 +198,11 @@ label_result.grid(row=5, column=0, columnspan=2, sticky='w', padx=5, pady=5)
 # Set initial focus to the first entry field
 entry_total_cost.focus_set()
 
+# Function to handle window close event with confirmation
+def on_closing():
+    if messagebox.askyesno("Confirm Close", "Are you sure you want to close?"):
+        root.destroy()
+
+root.protocol("WM_DELETE_WINDOW", on_closing)
 # Start the Tkinter event loop
 root.mainloop()
